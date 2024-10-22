@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:img_syncer/global.dart';
 
 class SMBForm extends StatefulWidget {
-  const SMBForm({Key? key}) : super(key: key);
+  const SMBForm({super.key});
   @override
   _SMBFormState createState() => _SMBFormState();
 }

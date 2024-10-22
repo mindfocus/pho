@@ -3,7 +3,7 @@ import 'package:img_syncer/choose_album_route.dart';
 import 'package:img_syncer/setting_storage_route.dart';
 
 class SettingBody extends StatelessWidget {
-  const SettingBody({Key? key}) : super(key: key);
+  const SettingBody({super.key});
 
   @override
   Widget build(BuildContext context) {

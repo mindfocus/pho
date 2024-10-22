@@ -7,9 +7,9 @@ import 'package:img_syncer/global.dart';
 
 class VideoRoute extends StatefulWidget {
   const VideoRoute({
-    Key? key,
+    super.key,
     required this.asset,
-  }) : super(key: key);
+  });
   final Asset asset;
 
   @override

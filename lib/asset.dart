@@ -475,8 +475,8 @@ Future<ImageInfo> loadImage(String path) async {
 Future<bool> isValidImage(Uint8List imageData) async {
   try {
     final codec =
-        await PaintingBinding.instance.instantiateImageCodec(imageData);
-    return codec != null;
+        await ui.instantiateImageCodec(imageData);
+    return codec.frameCount > 0;
   } catch (e) {
     return false;
   }

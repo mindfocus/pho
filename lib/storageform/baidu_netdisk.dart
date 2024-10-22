@@ -11,7 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:path_provider/path_provider.dart';
 
 class BaiduNetdiskForm extends StatefulWidget {
-  const BaiduNetdiskForm({Key? key}) : super(key: key);
+  const BaiduNetdiskForm({super.key});
   @override
   BaiduNetdiskFormState createState() => BaiduNetdiskFormState();
 }

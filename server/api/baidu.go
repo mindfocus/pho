@@ -9,9 +9,9 @@ import (
 	"sync"
 	"time"
 
-	login_success_html "github.com/fregie/img_syncer/assets/html/login_success"
-	pb "github.com/fregie/img_syncer/proto"
-	baidu "github.com/fregie/img_syncer/server/drive/baidu"
+	login_success_html "github.com/fregie/pho/assets/html/login_success"
+	pb "github.com/fregie/pho/proto"
+	baidu "github.com/fregie/pho/server/drive/baidu"
 )
 
 type authRsp struct {

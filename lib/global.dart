@@ -39,10 +39,17 @@ class Global {
         if (!re) return;
         final List<AssetPathEntity> paths = await PhotoManager.getAssetPathList(
             type: RequestType.common, hasAll: true);
-        // ignore: deprecated_member_use
-        paths.sort((a, b) => b.assetCount.compareTo(a.assetCount));
         if (paths.isNotEmpty) {
-          settingModel.setLocalFolder(paths[0].name);
+          // 使用 Future.wait 和 map 进行异步排序
+          final sortedPaths = await Future.wait(paths.map((path) async {
+            final count = await path.assetCountAsync;
+            return {'path': path, 'count': count};
+          })).then((list) {
+            list.sort((a, b) =>
+                (b['count'] as int).compareTo(a['count'] as int));
+            return list.map((item) => item['path'] as AssetPathEntity).toList();
+          });
+          settingModel.setLocalFolder(sortedPaths[0].name);
         }
       }
       await initDrive();
@@ -204,7 +211,7 @@ class SnackBarManager {
 late AppLocalizations l10n;
 
 void initI18n(BuildContext context) {
-  l10n = AppLocalizations.of(context);
+  l10n = AppLocalizations.of(context)!;
 }
 
 Completer<bool>? requesttingPermission;

@@ -11,8 +11,8 @@ import (
 	"testing"
 	"time"
 
-	pb "github.com/fregie/img_syncer/proto"
-	"github.com/fregie/img_syncer/test/static"
+	pb "github.com/fregie/pho/proto"
+	"github.com/fregie/pho/test/static"
 	"github.com/stretchr/testify/suite"
 	"github.com/vmware/go-nfs-client/nfs"
 	"github.com/vmware/go-nfs-client/nfs/rpc"

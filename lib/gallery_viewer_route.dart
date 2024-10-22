@@ -15,10 +15,10 @@ import 'package:gallery_saver/gallery_saver.dart';
 
 class GalleryViewerRoute extends StatefulWidget {
   const GalleryViewerRoute({
-    Key? key,
+    super.key,
     required this.useLocal,
     required this.originIndex,
-  }) : super(key: key);
+  });
   final bool useLocal;
   final int originIndex;
 
@@ -113,7 +113,7 @@ class GalleryViewerRouteState extends State<GalleryViewerRoute> {
           List<String> children = [
             if (currentAsset.fNumber != null) "f/${currentAsset.fNumber}",
             if (currentAsset.exposureTime != null)
-              "${currentAsset.exposureTime!}",
+              currentAsset.exposureTime!,
             if (currentAsset.focalLength != null)
               "${currentAsset.focalLength}mm",
             if (currentAsset.iSO != null) "ISO${currentAsset.iSO}",

@@ -7,7 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:img_syncer/global.dart';
 
 class WebDavForm extends StatefulWidget {
-  const WebDavForm({Key? key}) : super(key: key);
+  const WebDavForm({super.key});
 
   @override
   WebDavFormState createState() => WebDavFormState();

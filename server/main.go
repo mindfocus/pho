@@ -9,9 +9,9 @@ import (
 	_ "net/http/pprof"
 
 	version "github.com/fregie/PrintVersion"
-	pb "github.com/fregie/img_syncer/proto"
-	"github.com/fregie/img_syncer/server/api"
-	"github.com/fregie/img_syncer/server/imgmanager"
+	pb "github.com/fregie/pho/proto"
+	"github.com/fregie/pho/server/api"
+	"github.com/fregie/pho/server/imgmanager"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

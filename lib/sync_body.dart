@@ -13,13 +13,12 @@ import 'package:rxdart/rxdart.dart';
 import 'package:img_syncer/choose_album_route.dart';
 import 'package:img_syncer/setting_storage_route.dart';
 import 'package:img_syncer/global.dart';
-import 'package:path/path.dart';
 
 class SyncBody extends StatefulWidget {
   const SyncBody({
-    Key? key,
+    super.key,
     required this.localFolder,
-  }) : super(key: key);
+  });
 
   final String localFolder;
 
@@ -118,7 +117,7 @@ class SyncBodyState extends State<SyncBody> {
   //   });
   // }
 
-  Completer<bool>? _isGettingPhotos = null;
+  Completer<bool>? _isGettingPhotos;
   Future<void> getPhotos() async {
     if (_isGettingPhotos != null) {
       await _isGettingPhotos!.future;

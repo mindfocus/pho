@@ -8,13 +8,13 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/fregie/img_syncer/server/api"
-	"github.com/fregie/img_syncer/server/imgmanager"
+	"github.com/fregie/pho/server/api"
+	"github.com/fregie/pho/server/imgmanager"
 	_ "golang.org/x/mobile/bind"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 
-	pb "github.com/fregie/img_syncer/proto"
+	pb "github.com/fregie/pho/proto"
 )
 
 var (

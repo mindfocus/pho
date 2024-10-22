@@ -9,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	pb "github.com/fregie/img_syncer/proto"
+	pb "github.com/fregie/pho/proto"
 	"github.com/hirochachacha/go-smb2"
 )
 

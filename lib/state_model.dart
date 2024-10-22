@@ -192,11 +192,26 @@ class AssetModel extends ChangeNotifier {
     // choose the folder has most photos
     if (settingModel.localFolder == "") {
       int max = 0;
-      for (var path in paths) {
-        if (path.assetCount > max) {
-          max = path.assetCount;
-          settingModel.localFolder = path.name;
+      String maxFolderName = "";
+
+      // 使用 Future.wait 处理所有路径的异步 assetCount 获取
+      final counts = await Future.wait(paths.map((path) async {
+        final count = await path.assetCountAsync;
+        return {'path': path, 'count': count};
+      }));
+
+      for (var item in counts) {
+        final path = item['path'] as AssetPathEntity;
+        final count = item['count'] as int;
+
+        if (count > max) {
+          max = count;
+          maxFolderName = path.name;
         }
+      }
+
+      if (maxFolderName.isNotEmpty) {
+        settingModel.setLocalFolder(maxFolderName);
       }
     }
 

@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"time"
 
-	pb "github.com/fregie/img_syncer/proto"
-	"github.com/fregie/img_syncer/server/imgmanager"
+	pb "github.com/fregie/pho/proto"
+	"github.com/fregie/pho/server/imgmanager"
 )
 
 type api struct {

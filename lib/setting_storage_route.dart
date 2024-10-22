@@ -8,7 +8,7 @@ import 'package:img_syncer/state_model.dart';
 import 'package:img_syncer/global.dart';
 
 class SettingStorageRoute extends StatefulWidget {
-  const SettingStorageRoute({Key? key}) : super(key: key);
+  const SettingStorageRoute({super.key});
 
   @override
   SettingStorageRouteState createState() => SettingStorageRouteState();

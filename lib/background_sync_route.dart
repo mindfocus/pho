@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:photo_manager/photo_manager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:img_syncer/sync_timer.dart';
-import 'package:img_syncer/state_model.dart';
 import 'package:img_syncer/global.dart';
 
 class BackgroundSyncSettingRoute extends StatefulWidget {
-  const BackgroundSyncSettingRoute({Key? key}) : super(key: key);
+  const BackgroundSyncSettingRoute({super.key});
 
   @override
   _BackgroundSyncSettingRouteState createState() =>

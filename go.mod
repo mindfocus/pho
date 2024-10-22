@@ -1,4 +1,4 @@
-module github.com/fregie/img_syncer
+module github.com/fregie/pho
 
 go 1.18
 

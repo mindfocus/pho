@@ -4,7 +4,6 @@ import 'package:img_syncer/proto/img_syncer.pbgrpc.dart';
 import 'package:date_format/date_format.dart';
 import 'package:img_syncer/state_model.dart';
 import 'package:path/path.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:photo_manager/photo_manager.dart';
 import 'package:img_syncer/global.dart';
 import 'package:http/http.dart' as http;
@@ -104,7 +103,7 @@ class RemoteStorage {
     }
     int uploaded = 0;
     final imgLen = await file.length();
-    final thumbLen = thumbnailData!.length;
+    final thumbLen = thumbnailData.length;
     final totalLen = imgLen + thumbLen;
     stateModel.updateUploadProgress(asset.id, uploaded, totalLen);
 

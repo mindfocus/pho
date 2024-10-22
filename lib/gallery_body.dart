@@ -13,7 +13,6 @@ import 'package:rxdart/rxdart.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:img_syncer/global.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:gallery_saver/gallery_saver.dart';
@@ -22,7 +21,7 @@ import 'package:img_syncer/choose_album_route.dart';
 import 'package:img_syncer/setting_storage_route.dart';
 
 class GalleryBody extends StatefulWidget {
-  const GalleryBody({Key? key, required this.useLocal}) : super(key: key);
+  const GalleryBody({super.key, required this.useLocal});
   final bool useLocal;
 
   @override
@@ -649,7 +648,7 @@ class GalleryBodyState extends State<GalleryBody>
                         onChanged: (value) {
                           toggleSelection(i);
                         },
-                        fillColor: MaterialStateProperty.all(
+                        fillColor: WidgetStateProperty.all(
                             Theme.of(context).colorScheme.secondary),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),

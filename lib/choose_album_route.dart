@@ -8,7 +8,7 @@ import 'package:img_syncer/global.dart';
 import 'package:flutter/services.dart';
 
 class ChooseAlbumRoute extends StatefulWidget {
-  const ChooseAlbumRoute({Key? key}) : super(key: key);
+  const ChooseAlbumRoute({super.key});
   @override
   ChooseAlbumRouteState createState() => ChooseAlbumRouteState();
 }
@@ -108,10 +108,10 @@ class AlbumCard extends StatelessWidget {
   final AssetPathEntity path;
   final Uint8List? thumbnail;
   const AlbumCard({
-    Key? key,
+    super.key,
     required this.path,
     required this.thumbnail,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

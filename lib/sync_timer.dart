@@ -6,7 +6,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:photo_manager/photo_manager.dart';
 import 'package:img_syncer/storage/storage.dart';
 import 'package:img_syncer/event_bus.dart';
-import 'package:path/path.dart';
 import 'package:img_syncer/global.dart';
 
 Timer? autoSyncTimer;

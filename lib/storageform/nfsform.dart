@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:img_syncer/global.dart';
 
 class NFSForm extends StatefulWidget {
-  const NFSForm({Key? key}) : super(key: key);
+  const NFSForm({super.key});
 
   @override
   NFSFormState createState() => NFSFormState();
